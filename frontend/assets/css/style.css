@@ -1,0 +1,822 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+[role="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    color: inherit;
+    text-align: inherit;
+    background: none;
+    appearance: button;
+    user-select: none;
+}
+
+[role="button"]:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+[role="button"]:-moz-focusring,
+input[type="button"]:-moz-focusring,
+input[type="reset"]:-moz-focusring,
+input[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+    outline: none;
+}
+
+[role="button"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:-moz-focusring {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section,
+main, summary {
+    display: block;
+}
+
+html {
+    box-sizing: border-box;
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    line-height: 1;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+    outline: 0 !important;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    caption-side: bottom;
+}
+
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+}
+
+pre {
+    overflow: auto;
+    -ms-overflow-style: scrollbar;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    cursor: help;
+    text-decoration-skip-ink: none;
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}
+
+.text-tf-upper {
+    text-transform: uppercase;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+[type="reset"],
+[type="submit"],
+[type="button"] {
+    /* 2 */
+    -webkit-appearance: button;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+select {
+    word-wrap: normal;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+fieldset {
+    min-width: 0;
+}
+
+legend {
+    max-width: 100%;
+    white-space: normal;
+    color: inherit;
+    display: block;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    /* 1 */
+    -webkit-appearance: textfield;
+    /* 2 */
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    /* 1 */
+    -webkit-appearance: button;
+    /* 2 */
+    font: inherit;
+}
+
+output {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+.ml-7 {
+    margin-left: 7px;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-ExtraLight.eot');
+    src: local('Circe Rounded Extra Light'), local('CirceRounded-ExtraLight'),
+    url('../fonts/CirceRounded-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-ExtraLight.woff2') format('woff2'),
+    url('../fonts/CirceRounded-ExtraLight.woff') format('woff'),
+    url('../fonts/CirceRounded-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular2.eot');
+    src: local('Circe Rounded  Regular 2'), local('CirceRounded-Regular2'),
+    url('../fonts/CirceRounded-Regular2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-Regular2.woff2') format('woff2'),
+    url('../fonts/CirceRounded-Regular2.woff') format('woff'),
+    url('../fonts/CirceRounded-Regular2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded Alt';
+    src: url('../fonts/CirceRoundedAlt-Regular2.eot');
+    src: local('Circe Rounded Alt  Regular 2'), local('CirceRoundedAlt-Regular2'),
+    url('../fonts/CirceRoundedAlt-Regular2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRoundedAlt-Regular2.woff2') format('woff2'),
+    url('../fonts/CirceRoundedAlt-Regular2.woff') format('woff'),
+    url('../fonts/CirceRoundedAlt-Regular2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular3.eot');
+    src: local('Circe Rounded  Regular 3'), local('CirceRounded-Regular3'),
+    url('../fonts/CirceRounded-Regular3.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-Regular3.woff2') format('woff2'),
+    url('../fonts/CirceRounded-Regular3.woff') format('woff'),
+    url('../fonts/CirceRounded-Regular3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular5.eot');
+    src: local('Circe Rounded  Regular 5'), local('CirceRounded-Regular5'),
+    url('../fonts/CirceRounded-Regular5.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-Regular5.woff2') format('woff2'),
+    url('../fonts/CirceRounded-Regular5.woff') format('woff'),
+    url('../fonts/CirceRounded-Regular5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular.eot');
+    src: local('Circe Rounded'), local('CirceRounded-Regular'),
+    url('../fonts/CirceRounded-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-Regular.woff2') format('woff2'),
+    url('../fonts/CirceRounded-Regular.woff') format('woff'),
+    url('../fonts/CirceRounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded Alt';
+    src: url('../fonts/CirceRounded-AltBold.eot');
+    src: local('Circe Rounded Alt Bold'), local('CirceRounded-AltBold'),
+    url('../fonts/CirceRounded-AltBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-AltBold.woff2') format('woff2'),
+    url('../fonts/CirceRounded-AltBold.woff') format('woff'),
+    url('../fonts/CirceRounded-AltBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular4.eot');
+    src: local('Circe Rounded  Regular 4'), local('CirceRounded-Regular4'),
+    url('../fonts/CirceRounded-Regular4.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CirceRounded-Regular4.woff2') format('woff2'),
+    url('../fonts/CirceRounded-Regular4.woff') format('woff'),
+    url('../fonts/CirceRounded-Regular4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+.section-title {
+    display: block;
+
+    font-family: Circe Rounded;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+    color: #03417F;
+}
+
+.section-title-pl-30 {
+    padding-left: 30px;
+}
+
+.section-header {
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 60px;
+
+    position: relative;
+}
+
+.section-header-flex {
+    display: flex;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    flex: 0 1 auto;
+
+    width: calc(25% - 23px);
+    padding: 25px;
+    height: fit-content;
+
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 4px 2px rgba(142, 142, 142, 0.05);
+
+    position: relative;
+}
+
+.products-header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.products-img-label {
+    border-radius: 15px;
+    padding: 4px 10px;
+
+    font-family: Circe Rounded ;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.bc-orange {
+    background: rgba(255, 80, 0, 1);
+}
+
+.bc-blue {
+    background: rgba(11, 97, 183, 1);
+}
+
+.products-img {
+    border-bottom: 1px solid #B5C6CF;
+    position: relative;
+    display: flex;
+    line-height: 1;
+}
+
+.products-img img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products-info {
+    padding: 25px 0;
+    position: relative;
+}
+
+.products-title {
+    display: block;
+    width: 100%;
+
+    font-family: Circe Rounded;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.products-price {
+    display: flex;
+    align-items: center;
+}
+
+.products-price-item > span {
+    font-family: Circe Rounded ;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+    color: #0B61B7;
+}
+
+.products-price-old {
+    margin-left: 10px;
+    font-family: Circe Rounded ;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+    color: rgba(157, 157, 163, 1);
+}
+
+.products-price-item > span:nth-child(2) {
+    font-size: 0.75rem;
+    margin-left: 3px;
+}
+
+.products-price-old + .products-price-item span {
+    color: #FF0F00;
+}
+
+.products-select {
+    display: block;
+    width: 100%;
+    padding: 12px 23px;
+
+    position: relative;
+
+    background: rgba(244, 244, 244, 1);
+    border-radius: 55px;
+}
+
+.products-select-value {
+    font-family: Circe Rounded ;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+}
+
+.products-select-body {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 23px 12px 23px;
+
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    background: rgba(244, 244, 244, 1);
+    border-radius: 55px 55px 55px 55px;
+}
+
+.products-footer {
+    display: none;
+}
+
+.products-select-item {
+    font-family: Circe Rounded ;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+}
+
+.select-imitation .custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-imitation .custom-select-trigger {
+    position: relative;
+    cursor: pointer;
+
+    transition-duration: .3s;
+
+    display: flex;
+    align-items: center;
+    height: 46px;
+
+    overflow: hidden;
+    background: rgba(244, 244, 244, 1);
+    border-radius: 24px;
+}
+
+.select-imitation .custom-select .dropped {
+    display: none;
+
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
+    pointer-events: all;
+    transition: -o-transform 0.3s, opacity 0.3s;
+    background: rgba(244, 244, 244, 1);
+    border-radius: 24px;
+
+    position: absolute;
+    top: 51px;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.select-imitation .custom-options {
+    overflow-y: scroll;
+    max-height: 350px;
+}
+
+.select-imitation .custom-option {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition-duration: .3s;
+    z-index: 1;
+    background: rgba(244, 244, 244, 1);
+}
+
+.select-imitation .custom-option-selected {
+    width: 100%;
+}
+
+.select-imitation .custom-option-selected a {
+    color: #163450;
+}
+
+.select-imitation .custom-option-title {
+    color: #163450;
+    font-size: 0.9375rem;
+}
+
+.select-imitation .custom-option-title > span,
+.select-imitation .custom-option-title > a {
+    width: 100%;
+    display: block;
+    padding: 12px 23px;
+    border-radius: 0 !important;
+
+    font-family: Circe Rounded ;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.select-imitation .custom-option-title > a:hover span {
+    border-bottom-color: transparent;
+}
+
+.select-imitation .custom-option:hover {
+    cursor: pointer;
+    background-color: #F1F3F8;
+}
+
+.select-imitation .arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 38px;
+    border-radius: 0 2px 2px 0;
+}
+
+.select-imitation .arrow:after {
+    content: '\e92a';
+    color: #E76642;
+    font-family: "icomoon" !important;
+    font-size: 0.75rem;
+    transition-duration: .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.select-imitation .custom-select.open .dropped {
+    display: block;
+}
+
+.select-imitation .custom-select.open .arrow::after {
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.products-add-to-cart {
+    display: block;
+    margin-top: 15px;
+}
+
+.button-add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 20px;
+
+    background: rgba(255, 80, 0, 1);
+    border-radius: 60px;
+
+    text-align: center;
+    font-family: Circe Rounded;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.products-bottom {
+    margin-bottom: 25px;
+}
